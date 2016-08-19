@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">tp_imc</string>
+    <string name="labelPoids">Poids :</string>
+    <string name="labelTaille">Taille :</string>
+    <string name="radioMetre">Mètre</string>
+    <string name="radioCentimetre">Centimètre</string>
+    <string name="checkbox">Méga fonction !</string>
+    <string name="calculButton">Calculer l\'IMC</string>
+    <string name="raz">RAZ</string>
+    <string name="resultat">Résultat : </string>
+    <string name="informations">Vous devez cliquer sur le bouton "Calculer l'IMC" pour obtenir un résultat.</string>
 </resources>
