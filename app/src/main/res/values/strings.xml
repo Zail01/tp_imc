@@ -1,6 +1,20 @@
 <resources>
     <string name="app_name">tp_imc</string>
     <string name="labelPoids">Poids :</string>
+    <string name="labelPoids2">labelPoids2 :</string>
+    <string name="labelPoids3">labelPoids3 :</string>
+    <string name="labelPoids4">labelPoids4 :</string>
+    <string name="labelPoids5">labelPoids5 :</string>
+    <string name="labelPoids6">labelPoids6 :</string>
+    <string name="labelPoids7">labelPoids7 :</string>
+    <string name="labelPoids8">labelPoids8 :</string>
+    <string name="labelPoids9">labelPoids9 :</string>
+    <string name="labelPoids10">labelPoids10 :</string>
+    <string name="labelPoids11">labelPoids11 :</string>
+    <string name="labelPoids12">labelPoids12 :</string>
+    <string name="labelPoids13">labelPoids13 :</string>
+    <string name="labelPoids14">labelPoids14 :</string>
+    <string name="labelPoids15">labelPoids15 :</string>
     <string name="labelTaille">Taille :</string>
     <string name="radioMetre">Mètre</string>
     <string name="radioCentimetre">Centimètre</string>

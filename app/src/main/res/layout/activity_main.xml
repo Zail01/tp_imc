@@ -1,15 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:stretchColumns="1">
-    <TableRow>
+    >
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/labelPoids"
+                android:text="@string/labelPoids"
+                android:textColor="#FF0000"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="en kg"
+                android:id="@+id/poids"
+                android:layout_span="2"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/labelTaille"
+                android:text="@string/labelTaille"
+                android:textColor="#FF0000"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:id="@+id/taille"
+                android:layout_span="2"/>
+        </TableRow>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/taille"
+            android:id="@+id/group">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/radio1"
+                android:text="@string/radioMetre"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/radio2"
+                android:text="@string/radioCentimetre"/>
+        </RadioGroup>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkbox"
+            android:text="@string/checkbox"
+            android:layout_below="@id/group"/>
+        <TableRow>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dip"
+                android:layout_marginRight="25dip"
+                android:id="@+id/calcul"
+                android:text="@string/calculButton"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dip"
+                android:layout_marginRight="25dip"
+                android:id="@+id/raz"
+                android:text="@string/raz"
+                android:layout_column="2"/>
+        </TableRow>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/labelPoids"
-            android:text="@string/labelPoids"
+            android:id="@+id/resultat"
+            android:text="@string/resultat"
+            android:layout_below="@id/raz"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/informations"
+            android:text="@string/informations"
+            android:layout_below="@+id/resultat"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelPoids2"
+            android:text="@string/labelPoids2"
             android:textColor="#FF0000"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -18,15 +107,13 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:hint="en kg"
-            android:id="@+id/poids"
+            android:id="@+id/poids2"
             android:layout_span="2"/>
-    </TableRow>
-    <TableRow>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/labelTaille"
-            android:text="@string/labelTaille"
+            android:id="@+id/labelPoids3"
+            android:text="@string/labelPoids3"
             android:textColor="#FF0000"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -34,61 +121,188 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:id="@+id/taille"
+            android:hint="en kg"
+            android:id="@+id/poids3"
             android:layout_span="2"/>
-    </TableRow>
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/taille"
-        android:id="@+id/group">
-        <RadioButton
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/radio1"
-            android:text="@string/radioMetre"/>
-        <RadioButton
+            android:layout_height="wrap_content"
+            android:id="@+id/labelPoids4"
+            android:text="@string/labelPoids4"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/radio2"
-            android:text="@string/radioCentimetre"/>
-    </RadioGroup>
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkbox"
-        android:text="@string/checkbox"
-        android:layout_below="@id/group"/>
-    <TableRow>
-        <Button
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids4"
+            android:layout_span="2"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="25dip"
-            android:layout_marginRight="25dip"
-            android:id="@+id/calcul"
-            android:text="@string/calculButton"/>
-        <Button
+            android:id="@+id/labelPoids5"
+            android:text="@string/labelPoids5"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids5"
+            android:layout_span="2"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="25dip"
-            android:layout_marginRight="25dip"
-            android:id="@+id/raz"
-            android:text="@string/raz"
-            android:layout_column="2"/>
-    </TableRow>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/resultat"
-        android:text="@string/resultat"
-        android:layout_below="@id/raz"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/informations"
-        android:text="@string/informations"
-        android:layout_below="@+id/resultat"/>
-</TableLayout>
+            android:id="@+id/labelPoids6"
+            android:text="@string/labelPoids6"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids6"
+            android:layout_span="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelPoids7"
+            android:text="@string/labelPoids7"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids7"
+            android:layout_span="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelPoids8"
+            android:text="@string/labelPoids8"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids8"
+            android:layout_span="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelPoids9"
+            android:text="@string/labelPoids9"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids9"
+            android:layout_span="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelPoids10"
+            android:text="@string/labelPoids10"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids10"
+            android:layout_span="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelPoids11"
+            android:text="@string/labelPoids11"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids11"
+            android:layout_span="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelPoids12"
+            android:text="@string/labelPoids12"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids12"
+            android:layout_span="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelPoids13"
+            android:text="@string/labelPoids13"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids13"
+            android:layout_span="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelPoids14"
+            android:text="@string/labelPoids14"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids14"
+            android:layout_span="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelPoids15"
+            android:text="@string/labelPoids15"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="en kg"
+            android:id="@+id/poids15"
+            android:layout_span="2"/>
+    </TableLayout>
+</ScrollView>
